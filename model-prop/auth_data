@@ -1,0 +1,22 @@
+
+{
+  "request":{
+  "id_connector":"string",
+  "vin":"string[]",
+  "customer_program":"string"
+},
+  "response":{
+    "status_auth":"string",
+    "customer_program":"string",
+    "configuration":"json obj"
+  },
+  "on_db":{
+    "id_connector":"string",
+    "vin":"string[]",
+    "customer_program":"string",
+    "customer_info":{"user_name":"","user_company":"","user_program":"","user_email":[],"user_phone":[]}
+  },
+  "methods":["init_auth(request)->response"]
+}
+
+
