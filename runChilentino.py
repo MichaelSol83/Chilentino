@@ -1,3 +1,6 @@
+import bl_OBD
+import proxy
+
 
 def init_auth():
     print("todo procedure: 1.get vin key")
@@ -16,6 +19,12 @@ def run_diagnostics(authSettings,os_Configuration):
     print("todo run_commands_in_elm327")
     print("todo hadle_commands_send_toserver_logging")
 
-state_1=init_auth()
-state_2=init_configuration()
-run_diagnostics("{vin:1231223123,user:qqq-www-eee}","{conf:}")
+
+def testObd():
+    print(bl_OBD.Singleton().connect_to_obd());
+    print(bl_OBD.Singleton().run_query_speed());
+    print(proxy.startTread())
+
+testObd()
+
+
