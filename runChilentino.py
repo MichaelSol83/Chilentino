@@ -23,8 +23,20 @@ def run_diagnostics(authSettings,os_Configuration):
 def testObd():
     print(bl_OBD.Singleton().connect_to_obd());
     print(bl_OBD.Singleton().run_query_speed());
-    print(proxy.startTread())
+    print(proxy.startTread_init_auth())
+
+def poc_scenario():
+    temp_id_connector="xxx-yyy-zzz";
+   # vin=get_vin_from_obd()
+   # is_client_auth=call_auth_https(temp_id_connector,vin)
+   # speed_rate=get_speed_from_obd()
+   # is_send_ok=update_server_with_speedrate(temp_id_connector,vin)
+
+
+
 
 testObd()
+
+
 
 
